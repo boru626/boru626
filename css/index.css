@@ -1,0 +1,318 @@
+/* 加载动画 */
+#loading{
+    background-color: #e6eef0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+}
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    -webkit-animation: loading-center-absolute 1s infinite;
+    animation: loading-center-absolute 1s infinite;
+
+}
+.object{
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    float: left;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;	
+}
+.object:nth-child(2n+0) {
+    margin-right: 0px;
+
+}
+#object_one{
+    -webkit-animation: object_one 1s infinite;
+    animation: object_one 1s infinite;
+    }
+#object_two{
+    -webkit-animation: object_two 1s infinite;
+    animation: object_two 1s infinite;
+    }	
+#object_three{
+    -webkit-animation: object_three 1s infinite;
+    animation: object_three 1s infinite;
+    }		
+#object_four{
+    -webkit-animation: object_four 1s infinite;
+    animation: object_four 1s infinite;
+    }		
+    
+@-webkit-keyframes loading-center-absolute{
+100% {
+    -ms-transform: rotate(360deg); 
+       -webkit-transform: rotate(360deg); 
+    transform: rotate(360deg); 
+    }			
+    
+}		
+@keyframes loading-center-absolute{
+100% {
+    -ms-transform: rotate(360deg); 
+       -webkit-transform: rotate(360deg); 
+    transform: rotate(360deg); 
+    }
+}						
+@-webkit-keyframes object_one{
+50% {
+    -ms-transform: translate(20px,20px); 
+       -webkit-transform: translate(20px,20px);
+    transform: translate(20px,20px);
+    }
+}		
+@keyframes object_one{
+50% {
+     -ms-transform: translate(20px,20px); 
+       -webkit-transform: translate(20px,20px);
+    transform: translate(20px,20px);
+    }
+}
+@-webkit-keyframes object_two{
+50% {
+    -ms-transform: translate(-20px,20px); 
+       -webkit-transform: translate(-20px,20px);
+    transform: translate(-20px,20px);
+    }
+}		
+@keyframes object_two{
+50% {
+    -ms-transform: translate(-20px,20px); 
+       -webkit-transform: translate(-20px,20px);
+    transform: translate(-20px,20px);
+    }
+}
+@-webkit-keyframes object_three{
+50% {
+    -ms-transform: translate(20px,-20px); 
+       -webkit-transform: translate(20px,-20px);
+    transform: translate(20px,-20px);
+    }
+}		
+@keyframes object_three{
+50% {
+    -ms-transform: translate(20px,-20px); 
+       -webkit-transform: translate(20px,-20px);
+    transform: translate(20px,-20px);
+    }
+}
+@-webkit-keyframes object_four{
+50% {
+    -ms-transform: translate(-20px,-20px); 
+       -webkit-transform: translate(-20px,-20px);
+    transform: translate(-20px,-20px);
+    }
+}		
+@keyframes object_four{
+50% {
+    -ms-transform: translate(-20px,-20px); 
+       -webkit-transform: translate(-20px,-20px);
+    transform: translate(-20px,-20px);
+    }
+}
+/* 假装水印 */
+.zmj {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    color: #fff;
+    z-index: 999;
+}
+/* 背景颜色 */
+body {
+    background-color: #e6eef0;
+    animation: night 20s linear infinite;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/* 背景颜色动画 */
+@keyframes night {
+    0% {
+        background-color: #000;
+    }
+    25% {
+        background-color: #e6eef0;
+    }
+    50% {
+        background-color: #e6eef0;
+    }
+    75% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #000;
+    }
+}
+/* 小熊 */
+.bear {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    background: url(../img/熊.png) no-repeat;
+    animation: bear_a 1s steps(8) infinite,bear_b 3s linear forwards;
+}
+/* 小熊奔跑动画 */
+@keyframes bear_a {
+    0% {
+       background-position: 0 0; 
+    }
+    100% {
+       background-position: -1600px 0; 
+    }
+}
+/* 小熊移动到画面中央 */
+@keyframes bear_b {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* 近处雪山背景 */
+.bg_a {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 336px;
+    background: url(../img/雪山.png);
+    animation: bg_a 15s linear 3s infinite;
+}
+/* 雪山动画 */
+@keyframes bg_a {
+    0% {
+    }
+    100% {
+        background-position: -3840px 0;
+    }
+}
+/* 远处黑山背景 */
+.bg_b {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 569px;
+    background: url(../img/黑山.png);
+    animation: bg_b 60s linear 3s infinite;
+}
+/* 黑山动画 */
+@keyframes bg_b {
+    0% {
+    }
+    100% {
+        background-position: -3840px 0;
+    }
+}
+/* 太阳 */
+.sun {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    width: 134px;
+    height: 127px;
+    background: url(../img/太阳.png) no-repeat;
+    animation: sun 20s linear infinite;
+}
+/* 太阳动画 */
+@keyframes sun {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-450%);
+    }
+    50% {
+        transform: translateY(-450%);
+    }
+    75% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* 月亮 */
+.moon {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 134px;
+    height: 127px;
+    background: url(../img/月亮.png) no-repeat;
+    animation: yueliang 20s linear infinite;
+}
+/* 月亮动画 */
+@keyframes yueliang {
+    0% {
+        transform: translateY(-450%);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-450%);
+    }
+    100% {
+        transform: translateY(-450%);
+    }
+}
+/* 中心文字 */
+.Arctic {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 32px;
+}
+/* 中心文字动画 */
+@keyframes my {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* 导航 */
+.nav {
+    width: 100%;
+    height: 36px;
+}
+.nav ul {
+    display: flex;
+    text-align: center;
+    line-height: 36px;
+    font-size: 13px;
+    justify-content: space-around;
+}
+.nav li {
+    flex: 1;
+}
+.nav li a {
+    font-family: 'icomoon';
+    color: #fff;
+}
